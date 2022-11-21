@@ -1,0 +1,16 @@
+{
+  "name": "PhiMap",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ zak3939/phimap",
+    "create-local": "graph create --node http://localhost:8020/ ZaK3939/PhiMap",
+    "remove-local": "graph remove --node http://localhost:8020/ ZaK3939/PhiMap",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ZaK3939/PhiMap"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.28.0",
+    "@graphprotocol/graph-ts": "0.26.0"
+  }
+}
