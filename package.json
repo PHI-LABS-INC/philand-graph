@@ -1,0 +1,32 @@
+{
+  "name": "sample-staking-graph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ linnefromice/sample-staking-graph",
+    "create-local": "graph create --node http://localhost:8020/ linnefromice/sample-staking-graph",
+    "remove-local": "graph remove --node http://localhost:8020/ linnefromice/sample-staking-graph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 linnefromice/sample-staking-graph",
+    "docker:up:local": "docker-compose -f docker/docker-compose-localhost.yml up",
+    "docker:down:local": "docker-compose -f docker/docker-compose-localhost.yml down",
+    "all:local": "yarn codegen && yarn build && yarn create-local && yarn deploy-local"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "^0.43.0",
+    "@graphprotocol/graph-ts": "^0.27.0"
+  },
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PHI-LABS-INC/philand-graph.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/PHI-LABS-INC/philand-graph/issues"
+  },
+  "homepage": "https://github.com/PHI-LABS-INC/philand-graph#readme"
+}
